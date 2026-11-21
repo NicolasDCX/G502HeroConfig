@@ -15,6 +15,8 @@
     <RootNamespace>G502Tool.App</RootNamespace>
     <Version>0.1.0</Version>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- exe icon (Explorer, taskbar, title bar); made from Resources\Neon Cyan Gaming Mouse Icon.png -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <!-- startup: precompiled code, no runtime JIT for the app's own code -->
     <PublishReadyToRun>true</PublishReadyToRun>

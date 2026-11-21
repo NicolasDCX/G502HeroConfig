@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Code-only WPF (no XAML): the UI is built in C#, so this builds with the plain .NET SDK on
+    Windows, and also cross-compiles from Linux/macOS with EnableWindowsTargeting.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AssemblyName>G502HeroConfig</AssemblyName>
+    <RootNamespace>G502Tool.App</RootNamespace>
+    <Version>0.1.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- startup: precompiled code, no runtime JIT for the app's own code -->
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <TieredPGO>true</TieredPGO>
+    <UseSystemResourceKeys>false</UseSystemResourceKeys>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
+    <ProjectReference Include="../G502Tool.Core/G502Tool.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- mouse pictures for the Buttons section, cropped from ..\..\..\Resources\*.webp -->
+    <EmbeddedResource Include="Images\*.png" LogicalName="Images.%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

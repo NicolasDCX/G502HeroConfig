@@ -148,6 +148,8 @@ None of these could be checked without the hardware:
 
 ## Licensing
 
+Released under the [MIT License](LICENSE).
+
 The code is original. Protocol facts and the CRC routine come from libratbag (MIT) and are credited in
 `THIRD-PARTY-NOTICES.md`. Solaar (GPL) was only consulted to cross-check the USB ID; none of its code is used.
 
